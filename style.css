@@ -1,0 +1,207 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+nav {
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 0.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+}
+
+.section {
+  padding: 40px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.section1 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.section1 img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.section1 h2 {
+  font-size: 2.5rem;
+}
+
+.catGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.catGrid img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* gömma hamburge-ikonen på desktop */
+.hamburger {
+  display: none;
+}
+
+/* effekt för bild 1 */
+.section1 img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) ßrotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* effekt för bild 2 */
+.section2 img:hover {
+  border-radius: 50%;
+  transition: 2s;
+}
+.section2 img {
+  transition: 2s;
+}
+
+/* effekter för bilder i catgrid */
+.catGrid img:hover {
+  opacity: 0.7;
+  transition: 1s;
+}
+.catGrid img {
+  transition: 1s;
+}
+
+/* utseende för ipad */
+@media (max-width: 1024px) {
+  img {
+    max-width: 700px;
+  }
+}
+
+/* utseende för mobil/liten skärm */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  nav {
+    display: flex;
+    /* gömmer menyn-textalternativen i mobil */
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .container {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .section {
+    max-width: 700px;
+    align-items: center;
+  }
+
+  img {
+    max-width: 400px;
+  }
+
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .catGrid,
+  .section {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    align-items: center;
+  }
+}
